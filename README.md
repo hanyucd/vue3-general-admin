@@ -1,9 +1,11 @@
-# Vue 3 + TypeScript + Vite
+# vue3 通用后台管理
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+技术栈：Vue3 + Typescript + Pinia + Naive-ui + Vue-i18n + Vite
 
-## Recommended Setup
+次要：
+- unplugin-vue-components 按需自动导入组件
+- unplugin-auto-import 按需自动导入 API
 
-- [VS Code](https://code.visualstudio.com/) + [Vue - Official](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (previously Volar) and disable Vetur
+### 参考
 
-- Use [vue-tsc](https://github.com/vuejs/language-tools/tree/master/packages/tsc) for performing the same type checking from the command line, or for generating d.ts files for SFCs.
+[告别手动引入依赖：unplugin-auto-import](https://zhuanlan.zhihu.com/p/612397686)

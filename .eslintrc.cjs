@@ -26,6 +26,7 @@ module.exports = {
     'eslint:recommended',
     'plugin:vue/vue3-recommended',
     'plugin:@typescript-eslint/recommended',
+    './.eslintrc-auto-import.json'
   ],
   /**
    * "off" 或 0    ==>  关闭规则
