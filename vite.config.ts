@@ -29,7 +29,7 @@ export default defineConfig({
         'vue-router',
         '@vueuse/core',
         'vue-i18n',
-        'pinia',
+        // 'pinia',
         // 自定义预设
         {
           'naive-ui': [

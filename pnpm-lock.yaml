@@ -32,7 +32,7 @@ devDependencies:
     specifier: ^7.3.1
     version: 7.3.1(eslint@8.57.0)(typescript@5.4.2)
   '@unocss/reset':
-    specifier: 0.58.9
+    specifier: ^0.58.9
     version: 0.58.9
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
