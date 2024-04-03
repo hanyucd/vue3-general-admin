@@ -1,7 +1,3 @@
-<script setup lang="ts">
-
-const a = ref('hanyu');
-</script>
 
 <template>
   <div>
@@ -12,12 +8,23 @@ const a = ref('hanyu');
       <img src="./assets/vue.svg" class="logo vue" alt="Vue logo">
     </a>
   </div>
+  
   {{ a }}
+
+
   <HelloWorld msg="Vite + Vue" />
+
+  <div class="text-center text-green"> 学习 unocss </div>
 </template>
 
+<script setup lang="ts">
+import HelloWorld from '@/components/HelloWorld.vue';
+
+const a = ref('hanyu');
+</script>
+
 <style scoped>
-.logo {
+/* .logo {
   height: 6em;
   padding: 1.5em;
   will-change: filter;
@@ -28,5 +35,5 @@ const a = ref('hanyu');
 }
 .logo.vue:hover {
   filter: drop-shadow(0 0 2em #42b883aa);
-}
+} */
 </style>

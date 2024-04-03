@@ -1,6 +1,6 @@
 # vue3 通用后台管理
 
-技术栈：Vue3 + Typescript + Pinia + Naive-ui + Vue-i18n + Vite
+技术栈：Vue3 + Typescript + Pinia + Naive-ui + Vue-i18n + Unocss +  Vite
 
 次要：
 - unplugin-vue-components 按需自动导入组件

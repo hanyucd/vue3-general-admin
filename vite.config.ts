@@ -4,11 +4,23 @@ import vue from '@vitejs/plugin-vue';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { NaiveUiResolver } from 'unplugin-vue-components/resolvers';
+import UnoCSS from 'unocss/vite';
+
+import { fileURLToPath, URL } from 'node:url';
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  resolve: {
+    alias: {
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+    },
+  },
+  server: {
+    port: 8080,
+  },
   plugins: [
     vue(),
+    UnoCSS(),
     // eslintPlugin(),
     // 按需导入组件 api| https://zhuanlan.zhihu.com/p/612397686
     AutoImport({
@@ -40,8 +52,5 @@ export default defineConfig({
       dts: 'src/components.d.ts', // generate `components.d.ts` global declarations
       resolvers: [NaiveUiResolver()],
     }),
-  ],
-  server: {
-    port: 8080,
-  },
+  ]
 });

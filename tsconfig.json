@@ -1,4 +1,7 @@
 {
+  // "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
+  "include": ["src/**/*", "src/**/*.vue"],
+  "references": [{ "path": "./tsconfig.node.json" }],
   "compilerOptions": {
     "target": "ES2020",
     "useDefineForClassFields": true,
@@ -18,9 +21,10 @@
     "strict": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true
-  },
-  // "include": ["src/**/*.ts", "src/**/*.tsx", "src/**/*.vue"],
-  "include": ["src/**/*", "src/**/*.vue"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+    "noFallthroughCasesInSwitch": true,
+    // 设置模块名和模块路径的映射
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+  }
 }
