@@ -1,9 +1,9 @@
 
 <template>
   <n-config-provider>
-    <appProvider>
+    <AppProvider>
       <router-view />
-    </appProvider>
+    </AppProvider>
   </n-config-provider>
 </template>
 

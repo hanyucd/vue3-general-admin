@@ -1,7 +1,25 @@
 import type { RouteRecordRaw } from 'vue-router';
 
+import { Layout } from '@/layout';
+
 // 静态路由
 const constRoutes: RouteRecordRaw[] = [
+  {
+    path: '/',
+    name: 'index',
+    component: Layout,
+    redirect: '/home',
+    children: [
+      {
+        path: '/home',
+        name: 'Home',
+        component: () => import('@/views/dashboard/analysis/analysis.vue'),
+        meta: {
+          title: 'Home',
+        },
+      },
+    ],
+  },
   {
     path: '/login',
     name: 'login',

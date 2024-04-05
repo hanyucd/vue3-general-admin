@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="a">
     404
 
     <n-button>naive-ui</n-button>
@@ -7,14 +7,12 @@
 </template>
 
 <script setup lang="ts">
-import { useAppStore } from '@/stores';
-
-const appStore = useAppStore();
+// import { useAppStore } from '@/stores';
+// const appStore = useAppStore();
 
 // console.log(appStore);
 
 </script>
 
-<style scoped>
-
+<style lang="scss" scoped>
 </style>

@@ -10,7 +10,6 @@ export const useAppStore = defineStore('appModule', () => {
 
   console.log(defaultTheme);
 
-
   return {
     layout,
   };

@@ -22,14 +22,14 @@ export default defineConfig({
     vue(),
     UnoCSS(),
     // eslintPlugin(),
-    // 按需导入组件 api| https://zhuanlan.zhihu.com/p/612397686
+    // 按需导入 api | https://zhuanlan.zhihu.com/p/612397686
     AutoImport({
       imports: [
         'vue',
         'vue-router',
         '@vueuse/core',
         'vue-i18n',
-        // 'pinia',
+        'pinia',
         // 自定义预设
         {
           'naive-ui': [
