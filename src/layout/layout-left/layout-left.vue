@@ -1,35 +1,31 @@
-
 <template>
-  <n-layout class="h-screen">
-    <n-layout-header inverted class="pro-admin-mix-layout-header flex justify-between items-center px-4">
+  <n-layout has-sider class="h-screen">
+    <SideBar
+      :inverted="inverted"
+      :collapsed-width="siderCollapsedWidth"
+      :width="siderWidth"
+      :show-trigger="showSiderTrigger"
+      content-style="padding: 24px;"
+    >
       <div class="flex items-center">
         <HeaderLogo :src="logo" />
         <HeaderTitle :title="title" />
       </div>
-      <slot name="headerRight">
-        <div>右边</div>
-      </slot>
-    </n-layout-header>
-
-    <n-layout has-sider class="pro-admin-mix-layout-content">
-      <SideBar
-        :collapsed-width="siderCollapsedWidth"
-        :width="siderWidth"
-        :show-trigger="showSiderTrigger"
-        content-style="padding: 24px;"
-      >
-        侧边栏
-      </SideBar>
+      侧边栏
+    </SideBar>
+    
+    <n-layout>
+      <n-layout-header class="pro-admin-layout-header flex items-center justify-between px-4" />
 
       <AppMain content-style="padding: 24px;">
-        混合布局
+        左边布局
         <router-view />
       </AppMain>
     </n-layout>
   </n-layout>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import HeaderLogo from '../components/HeaderLogo/HeaderLogo.vue';
 import HeaderTitle from '../components/HeaderTitle/HeaderTitle.vue';
 import SideBar from '../components/SideBar/SideBar.vue';
@@ -42,22 +38,18 @@ const props = withDefaults(defineProps<{
   siderWidth?: number;
   siderCollapsedWidth?: number;
   showSiderTrigger?: boolean | 'bar' | 'arrow-circle';
+  inverted?: boolean; // 反转色
 }>(), {
   headerHeight: 48,
+  siderWidth: 240,
+  siderCollapsedWidth: 48,
 });
-
-// 头部高度
 const headerHeightVar = computed(() => `${props.headerHeight}px`);
-// 内容高度
-const contentHeightVar = computed(() => `calc(100vh - ${ props.headerHeight }px)`);
+// const contentHeightVar = computed(() => `calc(100vh - ${props.headerHeight}px)`);
 </script>
 
-<style lang="scss" scoped>
-.pro-admin-mix-layout-header {
+<style scoped>
+.pro-admin-layout-header{
   height: v-bind(headerHeightVar);
-}
-
-.pro-admin-mix-layout-content {
-  height: v-bind(contentHeightVar);
 }
 </style>
