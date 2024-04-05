@@ -7,9 +7,9 @@ export const layoutThemeConfig: ILayoutTheme = {
   layoutStyle: 'light',
   headerHeight: 48,
   logo,
-  siderWidth: 240,
-  siderCollapsedWidth: 48,
-  showSiderTrigger: 'bar',
+  siderWidth: 240, // 侧边栏宽度
+  siderCollapsedWidth: 50, // 侧边栏收起的宽度
+  showSiderTrigger: 'bar', // 侧边栏默认的触发方式
   collapsed: false,
   theme: 'default',
   fixed: true,

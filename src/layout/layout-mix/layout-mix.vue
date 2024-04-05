@@ -12,13 +12,19 @@
     </n-layout-header>
 
     <n-layout has-sider class="pro-admin-mix-layout-content">
-      <n-layout-sider content-style="padding: 24px;">
-        海淀桥
-      </n-layout-sider>
+      <SideBar
+        :collapsed-width="siderCollapsedWidth"
+        :width="siderWidth"
+        :show-trigger="showSiderTrigger"
+        content-style="padding: 24px;"
+      >
+        侧边栏
+      </SideBar>
 
-      <n-layout-content content-style="padding: 24px;">
-        <slot />
-      </n-layout-content>
+      <AppMain content-style="padding: 24px;">
+        主要内容
+        <router-view />
+      </AppMain>
     </n-layout>
   </n-layout>
 </template>
@@ -26,12 +32,16 @@
 <script lang="ts" setup>
 import HeaderLogo from '../components/HeaderLogo/HeaderLogo.vue';
 import HeaderTitle from '../components/HeaderTitle/HeaderTitle.vue';
-// import Title from '~/layouts/common/title.vue';
+import SideBar from '../components/SideBar/SideBar.vue';
+import AppMain from '../components/AppMain/AppMain.vue';
 
 const props = withDefaults(defineProps<{
   headerHeight?: number;
   logo?: string;
   title?: string;
+  siderWidth?: number;
+  siderCollapsedWidth?: number;
+  showSiderTrigger?: boolean | 'bar' | 'arrow-circle';
 }>(), {
   headerHeight: 48,
 });

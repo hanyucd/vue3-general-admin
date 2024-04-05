@@ -6,6 +6,7 @@ import pinia from './stores';
 
 import '@unocss/reset/tailwind.css'; // 样式重置
 import 'virtual:uno.css';
+import './styles/index.scss';
 
 const meta = document.createElement('meta');
 meta.name = 'naive-ui-style';

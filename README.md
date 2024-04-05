@@ -9,3 +9,5 @@
 ### 参考
 
 [告别手动引入依赖：unplugin-auto-import](https://zhuanlan.zhihu.com/p/612397686)
+
+- vue 透传 Attributes 使用
