@@ -1,7 +1,15 @@
 
 <template>
   <n-layout class="h-screen">
-    <n-layout-header class="pro-admin-mix-layout-header">颐和园路</n-layout-header>
+    <n-layout-header inverted class="pro-admin-mix-layout-header flex justify-between items-center px-4">
+      <div class="flex items-center">
+        <HeaderLogo :src="logo" />
+        <HeaderTitle :title="title" />
+      </div>
+      <slot name="headerRight">
+        <div>右边</div>
+      </slot>
+    </n-layout-header>
 
     <n-layout has-sider class="pro-admin-mix-layout-content">
       <n-layout-sider content-style="padding: 24px;">
@@ -16,8 +24,14 @@
 </template>
 
 <script lang="ts" setup>
+import HeaderLogo from '../components/HeaderLogo/HeaderLogo.vue';
+import HeaderTitle from '../components/HeaderTitle/HeaderTitle.vue';
+// import Title from '~/layouts/common/title.vue';
+
 const props = withDefaults(defineProps<{
   headerHeight?: number;
+  logo?: string;
+  title?: string;
 }>(), {
   headerHeight: 48,
 });
@@ -35,18 +49,5 @@ const contentHeightVar = computed(() => `calc(100vh - ${ props.headerHeight }px)
 
 .pro-admin-mix-layout-content {
   height: v-bind(contentHeightVar);
-}
-
-.n-layout-header,
-.n-layout-footer {
-  background: rgba(128, 128, 128, 0.2);
-}
-
-.n-layout-sider {
-  background: rgba(128, 128, 128, 0.3);
-}
-
-.n-layout-content {
-  background: rgba(128, 128, 128, 0.4);
 }
 </style>
