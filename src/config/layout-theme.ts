@@ -3,8 +3,9 @@ import logo from '@/assets/vue.svg';
 
 export const layoutThemeConfig: ILayoutTheme = {
   title: 'Naive admin Pro',
-  layout: 'mix',
+  // layout: 'mix',
   // layout: 'side',
+  layout: 'top',
   // layoutStyle: 'light',
   layoutStyle: 'inverted',
   headerHeight: 48,
