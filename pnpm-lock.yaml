@@ -34,6 +34,9 @@ devDependencies:
   '@unocss/reset':
     specifier: ^0.58.9
     version: 0.58.9
+  '@vicons/antd':
+    specifier: ^0.12.0
+    version: 0.12.0
   '@vitejs/plugin-vue':
     specifier: ^5.0.4
     version: 5.0.4(vite@5.2.0)(vue@3.4.21)
@@ -1326,6 +1329,10 @@ packages:
       vite: 5.2.0(@types/node@20.11.30)(sass@1.74.1)
     transitivePeerDependencies:
       - rollup
+    dev: true
+
+  /@vicons/antd@0.12.0:
+    resolution: {integrity: sha512-C0p6aO1EmGG1QHrqgUWQS1No20934OdWSRQshM5NIDK5H1On6tC26U0hT6Rmp40KfUsvhvX5YW8BoWJdNFifPg==}
     dev: true
 
   /@vitejs/plugin-vue@5.0.4(vite@5.2.0)(vue@3.4.21):
