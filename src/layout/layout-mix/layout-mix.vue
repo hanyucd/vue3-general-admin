@@ -16,7 +16,9 @@
         :collapsed-width="siderCollapsedWidth"
         :width="siderWidth"
         :show-trigger="showSiderTrigger"
+        :collapsed="collapsed"
         content-style="padding: 24px;"
+        @update:collapsed="($event) => $emit('update:collapsed', $event)"
       >
         侧边栏
       </SideBar>
@@ -42,9 +44,15 @@ const props = withDefaults(defineProps<{
   siderWidth?: number;
   siderCollapsedWidth?: number;
   showSiderTrigger?: boolean | 'bar' | 'arrow-circle';
+  collapsed?: boolean;
+  collapsedIconSize?: number;
 }>(), {
   headerHeight: 48,
+  collapsed: false,
+  collapsedIconSize: 22,
 });
+
+defineEmits(['update:collapsed']);
 
 // 头部高度
 const headerHeightVar = computed(() => `${props.headerHeight}px`);

@@ -3,9 +3,10 @@ import logo from '@/assets/vue.svg';
 
 export const layoutThemeConfig: ILayoutTheme = {
   title: 'Naive admin Pro',
-  // layout: 'mix',
-  layout: 'side',
-  layoutStyle: 'light',
+  layout: 'mix',
+  // layout: 'side',
+  // layoutStyle: 'light',
+  layoutStyle: 'inverted',
   headerHeight: 48,
   logo,
   siderWidth: 240, // 侧边栏宽度

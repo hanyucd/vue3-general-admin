@@ -2,6 +2,7 @@
   <!-- 混合布局 -->
   <MixLayout
     v-if="layout.layout === 'mix'"
+    v-model:collapsed="layout.collapsed"
     :logo="layout.logo"
     :title="layout.title"
     :show-sider-trigger="layout.showSiderTrigger"
@@ -20,6 +21,7 @@
   <!-- 左侧布局 -->
   <LeftLayout
     v-if="layout.layout === 'side'"
+    v-model:collapsed="layout.collapsed"
     :logo="layout.logo"
     :title="layout.title"
     :show-sider-trigger="layout.showSiderTrigger"
