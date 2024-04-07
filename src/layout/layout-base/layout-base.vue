@@ -4,6 +4,7 @@
     v-if="isMobile"
     v-model:visible="visible"
     :logo="layout.logo"
+    :title="layout.title"
   >
     <template #headerRight>
       <div>
@@ -82,9 +83,19 @@ import { useQueryBreakpoints } from '@/hooks/queryBreakpointHook';
 import { useAppStore } from '@/stores';
 
 const appStore = useAppStore();
-const { isMobile } = useQueryBreakpoints();
+const { isMobile, isDesktop, isPad } = useQueryBreakpoints();
 
 const { layout, visible } = storeToRefs(appStore);
+
+watchEffect(() => {
+  if (isDesktop.value) {
+    appStore.toggleCollapsed(false);
+  } else if (isPad.value) {
+    appStore.toggleCollapsed(true);
+  }
+
+  if (isMobile.value) appStore.toggleVisible(false);
+});
 </script>
 
 <style scoped>

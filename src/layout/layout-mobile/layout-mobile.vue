@@ -2,7 +2,7 @@
 <template>
   <n-layout class="h-screen" style="--n-color:var(--pro-admin-layout-content-bg)">
     <n-layout-header
-      :inverted="inverted"
+      :inverted="headerInverted"
       class="pro-admin-mix-layout-header flex justify-between items-center px-4"
     >
       <div class="flex items-center">
@@ -31,14 +31,22 @@
     placement="left"
     @update:show="(val) => $emit('update:visible', val)"
   >
-    <n-drawer-content>
-      《斯通纳》是美国作家约翰·威廉姆斯在 1965 年出版的小说。
+    <n-drawer-content body-content-style="padding:0">
+      <n-layout class="h-100%">
+        <n-layout-header class="h-100%" :inverted="drawerInverted">
+          <div class="flex items-center justify-center pt-24px">
+            <HeaderLogo :src="logo" size="30" />
+            <HeaderTitle :title="title" size="22" />
+          </div>
+        </n-layout-header>
+      </n-layout>
     </n-drawer-content>
   </n-drawer>
 </template>
 
 <script lang="ts" setup>
 import HeaderLogo from '../components/HeaderLogo/HeaderLogo.vue';
+import HeaderTitle from '../components/HeaderTitle/HeaderTitle.vue';
 import AppMain from '../components/AppMain/AppMain.vue';
 import { MenuUnfoldOutlined } from '@vicons/antd';
 
@@ -48,9 +56,12 @@ const props = withDefaults(defineProps<{
   title?: string;
   inverted?: boolean;
   visible?: boolean;
+  headerInverted?: boolean;
+  drawerInverted?: boolean;
 }>(), {
   headerHeight: 48,
   visible: false,
+  drawerInverted: true
 });
 
 const emit = defineEmits(['update:visible']);
