@@ -1,6 +1,6 @@
 import type { RouteRecordRaw } from 'vue-router';
 
-import { Layout } from '@/layout';
+import Layout from '@/layout/index.vue';
 
 // 静态路由
 const constRoutes: RouteRecordRaw[] = [

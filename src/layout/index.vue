@@ -71,6 +71,8 @@
       <router-view />
     </TopLayout>
   </template>
+
+  <SettingDrawer />
 </template>
 
 <script lang="ts" setup>
@@ -78,6 +80,7 @@ import MixLayout from '@/layout/layout-mix/layout-mix.vue';
 import LeftLayout from '@/layout/layout-left/layout-left.vue';
 import TopLayout from '@/layout/layout-top/layout-top.vue';
 import MobileLayout from '@/layout/layout-mobile/layout-mobile.vue';
+import SettingDrawer from './components/SettingDrawer/SettingDrawer.vue';
 
 import { useQueryBreakpoints } from '@/hooks/queryBreakpointHook';
 import { useAppStore } from '@/stores';
