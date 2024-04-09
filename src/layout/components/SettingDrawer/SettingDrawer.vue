@@ -12,9 +12,18 @@
     </div>
   </Teleport>
 
+  <!-- 设置 drawer -->
   <n-drawer v-model:show="show" width="300">
     <n-drawer-content>
       这里是内容区域
+      <n-space size="large">
+        <!-- <LayoutSelect /> -->
+
+        <!-- <LayoutSelect checked /> -->
+        <LayoutSelect layout="side" checked />
+        <LayoutSelect layout="mix" />
+        <LayoutSelect layout="top" />
+      </n-space>
     </n-drawer-content>
 
     <div class="absolute top-240px right-300px">
@@ -31,9 +40,11 @@
 </template>
 
 <script lang="ts" setup>
+import LayoutSelect from './components/LayoutSelect/LayoutSelect.vue';
 import { SettingOutlined, CloseOutlined } from '@vicons/antd';
 
-const show = ref(false);
+// 是否打开 设置 drawer
+const show = ref(true);
 
 /**
  * 打开、关闭 drawer

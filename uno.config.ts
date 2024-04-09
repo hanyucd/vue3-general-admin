@@ -2,7 +2,7 @@ import { defineConfig, presetAttributify, presetIcons, presetTypography, presetU
 
 export default defineConfig({
   // ...UnoCSS options
-  // safelist: ['bg-[var(--inverted-color)]', 'bg-[var(--base-color)]', 'h-75%', 'h-100%', 'bottom-0', 'op-40'],
+  safelist: ['bg-[var(--inverted-color)]', 'bg-[var(--base-color)]', 'h-75%', 'h-100%', 'bottom-0', 'op-40'],
   // 预设
   presets: [
     presetUno(), // 默认预设 | @unocss/preset-wind
