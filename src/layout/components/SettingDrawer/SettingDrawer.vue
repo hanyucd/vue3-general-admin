@@ -17,9 +17,6 @@
     <n-drawer-content>
       这里是内容区域
       <n-space size="large">
-        <!-- <LayoutSelect /> -->
-
-        <!-- <LayoutSelect checked /> -->
         <LayoutSelect layout="side" checked />
         <LayoutSelect layout="mix" />
         <LayoutSelect layout="top" />

@@ -23,18 +23,16 @@ import { CheckOutlined } from '@vicons/antd';
 import type { VNodeChild } from 'vue';
 
 const props = withDefaults(defineProps<{
-    layout?: 'mix' | 'side' | 'top';
-    inverted?: boolean;
-    checked?: boolean;
-    dark?: boolean;
-    title?: string | (() => VNodeChild);
-  }>(),
-  {
-    layout: 'mix',
-    inverted: false,
-    checked: false,
-  },
-);
+  layout?: 'mix' | 'side' | 'top';
+  inverted?: boolean;
+  checked?: boolean;
+  dark?: boolean;
+  title?: string | (() => VNodeChild);
+}>(), {
+  layout: 'mix',
+  inverted: false,
+  checked: false,
+});
 
 const headerClass = computed(() => {
   if (props.layout === 'mix' || props.layout === 'top' || props.dark)
@@ -51,7 +49,8 @@ const siderClass = computed(() => {
     return ['bg-[var(--base-color)]', 'h-75%', 'bottom-0'];
 
   if (props.layout === 'side')
-    return ['h-100%', `bg-[var(--${props.inverted || props.dark ? 'inverted' : 'base'}-color)]`];
+    // return ['h-100%', `bg-[var(--${props.inverted || props.dark ? 'inverted' : 'base'}-color)]`];
+    return ['h-100%', `bg-[var(--inverted-color)]`];
 
   return [];
 });
