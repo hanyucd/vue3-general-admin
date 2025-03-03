@@ -1,7 +1,7 @@
 
 export interface ILayoutTheme {
   title?: string;
-  layout: 'mix' | 'side' | 'top';
+  layout: 'mix' | 'side' | 'top'; // 布局类型
   layoutStyle: 'inverted' | 'light' | 'dark';
   headerHeight: number;
   logo?: string;

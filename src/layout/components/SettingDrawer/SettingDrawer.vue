@@ -23,8 +23,8 @@
       </n-space>
     </n-drawer-content>
 
+    <!-- 关闭按钮 -->
     <div class="absolute top-240px right-300px">
-      <!-- 关闭按钮 -->
       <n-button type="primary" class="b-rd-tr-0! b-rd-br-0!" size="large" @click="handleClick(false)">
         <template #icon>
           <n-icon size="24">
@@ -41,7 +41,7 @@ import LayoutSelect from './components/LayoutSelect/LayoutSelect.vue';
 import { SettingOutlined, CloseOutlined } from '@vicons/antd';
 
 // 是否打开 设置 drawer
-const show = ref(true);
+const show = ref(false);
 
 /**
  * 打开、关闭 drawer

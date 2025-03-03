@@ -5,6 +5,7 @@
 </template>
 
 <script setup lang="ts">
+// 透传
 const attrs = useAttrs();
 </script>
 

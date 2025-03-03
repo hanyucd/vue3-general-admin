@@ -23,5 +23,5 @@ app.mount('#app');
 // createApp(App).mount('#app');
 
 // console.log(import.meta);
-// console.log(import.meta.env);
+console.log(import.meta.env);
 

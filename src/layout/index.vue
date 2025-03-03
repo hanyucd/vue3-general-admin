@@ -86,7 +86,11 @@ import { useQueryBreakpoints } from '@/hooks/queryBreakpointHook';
 import { useAppStore } from '@/stores';
 
 const appStore = useAppStore();
+// 判断 响应式布局容器
 const { isMobile, isDesktop, isPad } = useQueryBreakpoints();
+// vueuse: 反应式窗口大小
+// const { width } = useWindowSize();
+
 
 const { layout, visible } = storeToRefs(appStore);
 

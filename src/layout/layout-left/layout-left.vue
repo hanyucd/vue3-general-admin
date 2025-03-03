@@ -1,5 +1,6 @@
 <template>
   <n-layout has-sider class="h-screen">
+    <!-- 侧边栏 -->
     <SideBar
       :inverted="inverted"
       :collapsed="collapsed"
@@ -12,6 +13,7 @@
         <HeaderLogo :src="logo" size="30" />
         <HeaderTitle v-if="!collapsed" :title="title" size="22" />
       </div>
+      
       侧边栏
     </SideBar>
     

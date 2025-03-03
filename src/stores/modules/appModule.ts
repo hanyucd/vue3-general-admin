@@ -1,11 +1,12 @@
 import { defineStore } from 'pinia';
 import { ref } from 'vue';
 
+import { layoutThemeConfig } from '@/config/layout-theme';
 import { useLayoutTheme } from '@/hooks/layoutThemeHook';
 
 export const useAppStore = defineStore('appModule', () => {
-  // const defaultTheme = import.meta.env.DEV ? layoutThemeConfig : useLayoutTheme()
-  const defaultTheme = useLayoutTheme();
+  const defaultTheme = import.meta.env.DEV ? layoutThemeConfig : useLayoutTheme();
+  // const defaultTheme = useLayoutTheme();
   // 布局模式
   const layout = reactive(unref(defaultTheme));
   // 移动端布局模式-是否打开左侧菜单 drawer
